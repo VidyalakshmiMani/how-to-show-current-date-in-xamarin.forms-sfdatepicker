@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:DatePickerSample"
+             xmlns:datePicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             x:Class="DatePickerSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:DateViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Button Text="Open Picker" 
+                x:Name="pickerButton"
+                Clicked="PickerButton_Clicked"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50" 
+                WidthRequest="100"/>
+
+        <datePicker:SfDatePicker x:Name="datePicker" 
+                                 IsOpen="False"
+                                 PickerHeight="300"
+                                 PickerWidth="300"
+                                 PickerMode="Dialog"/>
+    </StackLayout>
+</ContentPage>
